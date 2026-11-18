@@ -105,3 +105,12 @@ once each deployment is verified; pending deployments are not claimed as live.
 A binary sentiment model can misread sarcasm, mixed opinions and unfamiliar
 wording. Two successful examples validate the deployment path, not general
 classification accuracy.
+
+## Current deployment record
+
+Published source: https://github.com/Izanagi-x/genai-task39-review-tone-lab
+
+The app passes actual local inference and local UI checks. Streamlit Cloud and
+Hugging Face live deployments are pending account sign-in; no live URL is
+claimed yet. The final submission archive will be updated with both verified
+live URLs and screenshots after deployment.

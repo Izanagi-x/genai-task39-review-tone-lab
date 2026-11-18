@@ -1,11 +1,13 @@
 {
   "streamlit_cloud": {
-    "status": "pending",
+    "status": "pending_account_sign_in",
     "url": null
   },
   "hugging_face_spaces": {
-    "status": "pending",
+    "status": "pending_account_sign_in",
     "url": null
   },
-  "local_actual_model_tested": true
+  "local_actual_model_tested": true,
+  "github_repository": "https://github.com/Izanagi-x/genai-task39-review-tone-lab",
+  "local_browser_preview_tested": true
 }
