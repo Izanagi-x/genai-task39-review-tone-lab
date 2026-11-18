@@ -1,13 +1,53 @@
 {
+  "verified_date": "2026-11-18",
+  "github_repository": "https://github.com/Izanagi-x/genai-task39-review-tone-lab",
   "streamlit_cloud": {
-    "status": "pending_account_sign_in",
-    "url": null
+    "status": "live_verified",
+    "url": "https://izanagi-review-tone-lab.streamlit.app/",
+    "runtime": "Python 3.12 / Streamlit 1.67.0 / torch 2.15.0+cpu",
+    "checks": [
+      {
+        "input": "I loved this helpful book.",
+        "label": "Positive",
+        "raw_output": "positive"
+      },
+      {
+        "input": "This was a terrible waste of time.",
+        "label": "Negative",
+        "raw_output": "negative"
+      },
+      {
+        "input": "",
+        "validation_message": "Enter a short review first."
+      }
+    ],
+    "empty_input_clears_previous_result": true
   },
   "hugging_face_spaces": {
-    "status": "pending_account_sign_in",
-    "url": null
+    "status": "live_verified",
+    "url": "https://huggingface.co/spaces/Ragnarith/review-tone-lab",
+    "direct_app_url": "https://ragnarith-review-tone-lab.hf.space/",
+    "runtime": "Python 3.12 / Gradio 6.32.0 / spaces 0.52.1 / torch 2.13.0 / ZeroGPU",
+    "checks": [
+      {
+        "input": "I loved this helpful book.",
+        "label": "Positive",
+        "raw_output": "positive"
+      },
+      {
+        "input": "This was a terrible waste of time.",
+        "label": "Negative",
+        "raw_output": "negative"
+      },
+      {
+        "input": "",
+        "validation_message": "Enter a short review first."
+      }
+    ],
+    "adaptation": "Gradio interface over shared inference engine; Docker and CPU Basic unavailable in free creation form",
+    "observed_gpu_queue": "Negative request briefly waited for a GPU, then completed"
   },
   "local_actual_model_tested": true,
-  "github_repository": "https://github.com/Izanagi-x/genai-task39-review-tone-lab",
-  "local_browser_preview_tested": true
+  "local_browser_preview_tested": true,
+  "scope": "Deployment smoke checks, not an accuracy benchmark"
 }

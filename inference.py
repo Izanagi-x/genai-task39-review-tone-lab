@@ -6,7 +6,7 @@ MODEL_ID = 'google/flan-t5-small'
 REVISION = '0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab'
 
 
-def load_model():
+def load_model(device='cpu'):
     import torch
     from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
     torch.set_num_threads(2)
@@ -15,10 +15,12 @@ def load_model():
     model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_ID, revision=REVISION,
         token=False, trust_remote_code=False, use_safetensors=True)
     model.eval()
+    if device != 'cpu':
+        model.to(device)
     return tokenizer, model, threading.Lock()
 
 
-def classify_review(review, resources):
+def classify_review(review, resources, device='cpu'):
     if not isinstance(review, str) or not review.strip():
         raise ValueError('Enter a short review first.')
     review = review.strip()
@@ -32,7 +34,11 @@ def classify_review(review, resources):
     import torch
     started = time.monotonic()
     with lock, torch.inference_mode():
+        if device != 'cpu':
+            inputs = {name: value.to(device) for name, value in inputs.items()}
         outputs = model.generate(**inputs, max_new_tokens=8, do_sample=False, num_beams=1)
+        if device != 'cpu':
+            outputs = outputs.cpu()
     raw = tokenizer.decode(outputs[0], skip_special_tokens=True).strip()
     normalized = raw.lower().strip(' .!\n')
     label = normalized.capitalize() if normalized in ('positive', 'negative') else 'Unclear'

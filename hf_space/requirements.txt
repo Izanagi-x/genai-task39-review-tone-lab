@@ -1,0 +1,4 @@
+# ZeroGPU-compatible PyTorch; hosted inference uses the GPU handler.
+transformers==5.23.0
+torch==2.13.0
+spaces==0.52.1

@@ -1,0 +1,16 @@
+{
+  "execution": "actual shared model engine through Gradio callback",
+  "results": [
+    {
+      "input": "I loved this helpful book.",
+      "label": "Positive",
+      "generated_text": "positive"
+    },
+    {
+      "input": "This was a terrible waste of time.",
+      "label": "Negative",
+      "generated_text": "negative"
+    }
+  ],
+  "empty_input_rejected": true
+}
