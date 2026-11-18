@@ -1,0 +1,11 @@
+{
+  "streamlit_cloud": {
+    "status": "pending",
+    "url": null
+  },
+  "hugging_face_spaces": {
+    "status": "pending",
+    "url": null
+  },
+  "local_actual_model_tested": true
+}

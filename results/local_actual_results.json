@@ -1,0 +1,23 @@
+{
+  "execution": "actual local Transformers model.generate calls",
+  "results": [
+    {
+      "review": "I loved this helpful book.",
+      "label": "Positive",
+      "generated_text": "positive",
+      "model": "google/flan-t5-small",
+      "revision": "0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab",
+      "seconds": 0.307,
+      "expected_for_validation": "Positive"
+    },
+    {
+      "review": "This was a terrible waste of time.",
+      "label": "Negative",
+      "generated_text": "negative",
+      "model": "google/flan-t5-small",
+      "revision": "0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab",
+      "seconds": 0.096,
+      "expected_for_validation": "Negative"
+    }
+  ]
+}

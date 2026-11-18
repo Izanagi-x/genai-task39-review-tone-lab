@@ -1,0 +1,3 @@
+Input/token limits, deterministic generation options and positive/negative/unexpected-label handling passed with explicit fixtures.
+2026-11-18 21:07:12.154 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+Streamlit examples, generated-label display, stale-result clearing and empty-input errors passed using explicit UI fixtures.
